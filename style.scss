@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #001b47;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    height: 100vh;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+html {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+
+section {
+   min-width: 70%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   h2 {
+       text-align: center;
+       max-width: 200mm;
+       @media screen and (max-width: 800px) {
+            max-width: 100mm;
+       }
+       opacity: 0;
+       transition: opacity 1s ease;
+       a {
+           color:cyan
+       }
+   }
+   h2.open {
+       opacity: 100%;
+       transition: opacity 0.5s ease;
+   }
+}
+.main {
+    height: 100%;
+}
+
+footer {
+    margin-left: 30px;
+    height: 100px;
+    a {
+        color: cyan;
+    }
+}
+
+
+
+
+
+main {
+    opacity: 100%;
+    height: 50vh;
+    min-width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slide-up 1s ease forwards;
+    h1 {
+        font-size: 50pt;
+        @media screen and (max-width: 800px) {
+            font-size: 30pt;
+        }
+    }
+    .generate {
+        width: 200px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        padding: 0;
+        cursor: pointer;
+        border: solid 2px rgb(53, 32, 194);
+        font-family: sans-serif;
+        font-style: bold;
+        background-color: white;
+        transition: background-color 0.5s, color 0.5s ease ;
+        color: black;
+        font-size: 30px;
+    }
+    .generate:hover {
+        background-color: rgb(53, 32, 194);
+        color:white
+    }
+    .generate:focus { outline: none; }
+}
+@keyframes slide-up {
+    to {
+        margin-top: 0;
+        opacity: 100%;
+    }
+    from {
+        margin-top: 200px;
+        opacity: 5%;
+    }
+}
